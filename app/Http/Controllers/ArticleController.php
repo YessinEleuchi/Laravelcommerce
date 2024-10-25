@@ -16,7 +16,7 @@ class ArticleController extends Controller
 
         try {
 
-            $article = Article::with("scategorie")->get();
+            $article = Article::with("sous_categorie")->get();
             return response()->json($article, 200);
         } catch (\Exception $e) {
 
